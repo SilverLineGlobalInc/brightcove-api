@@ -1,0 +1,45 @@
+{
+  "name": "brightcove-api",
+  "version": "0.1.5",
+  "description": "Provides an API for signing and sending calls to the BrightCove CMS API",
+  "main": "src/index.js",
+  "dependencies": {
+    "lodash": "3.6.*",
+    "request": "^2.55.0"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "coffee-script": "^1.9.0",
+    "nock": "^1.6.0",
+    "sinon": "^1.14.1",
+    "yargs": "^3.7.1"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.coffee"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "c9901377e932b5afad91ca1ae80ef06bfe317934",
+  "_id": "brightcove-api@0.1.5",
+  "_shasum": "3b23d5b3084daf1b471da3198679a2fed2bc462e",
+  "_from": "brightcove-api@*",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "adodson",
+    "email": "andrewjdodson@gmail.com"
+  },
+  "dist": {
+    "shasum": "3b23d5b3084daf1b471da3198679a2fed2bc462e",
+    "tarball": "http://registry.npmjs.org/brightcove-api/-/brightcove-api-0.1.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "adodson",
+      "email": "andrewjdodson@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/brightcove-api/-/brightcove-api-0.1.5.tgz",
+  "readme": "ERROR: No README data found!"
+}
