@@ -63,7 +63,7 @@ var bc = module.exports = {
 
 		// Remove path from request
 		if( options.path ){
-			options.url = "https://ingestion.api.brightcove.com/v1/accounts/"+ bc.options.account_id +"/"+options.path;
+			options.url = "https://ingest.api.brightcove.com/v1/accounts/"+ bc.options.account_id +"/"+options.path;
 			delete options.path;
 		}
 
