@@ -8,7 +8,7 @@ Provides an API for signing and sending calls to the BrightCove CMS API
 
 	// Load brightcove module
 
-	var bc = require('brightcove');
+	var bc = require('brightcove-api');
 
 
 	// Set the account credentials to use
@@ -23,7 +23,7 @@ Provides an API for signing and sending calls to the BrightCove CMS API
 	// Get videos updated since .
 
 	bc
-	.api({
+	.cms_api({
 		path : 'videos',
         qs : {
             q: "updated_at:2015-03-14T04:56:42.589Z..",
