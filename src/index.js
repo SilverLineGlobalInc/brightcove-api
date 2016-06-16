@@ -85,6 +85,35 @@ var bc = module.exports = {
 
 	},
 
+	analytics_api : function(options){
+
+		if( !this.options.client_id || !this.options.client_secret ){
+			throw new Error('required_credentials');
+		}
+
+		// Remove path from request
+		if( options.path ){
+			options.url = "https://analytics.api.brightcove.com/v1/"+options.analyticsType+"/accounts/"+ bc.options.account_id +"/"+options.path;
+			delete options.path;
+		}
+
+		if(!options.headers){
+			options.headers = {};
+		}
+
+		return promise_request.call(this,options)
+		.then(null, function(){
+			// The call failed
+
+			// Remove item from the store
+			store.removeItem( bc.options.client_id );
+
+			// Try once more
+			return promise_request.call(bc,options);
+		});
+
+	},
+
 	login : function(){
 
 
