@@ -256,16 +256,20 @@ function resolve_json(resolve, reject, err, res, body){
 	}
 
 	if(body){
-		try{
-			json = JSON.parse(body);
-		}
-		catch(e){
-			reject({
-				error : "invalid_response",
-				error_description : e.message
-			});
-			return;
-		}
+    if (typeof body !== 'object') {
+      try {
+        json = JSON.parse(body);
+      }
+      catch(e) {
+        reject({
+          error: "invalid_response",
+          error_description: e.message
+        });
+      }
+      return
+    } else {
+      json = body;
+    }
 	}
 	else{
 		json = {};
